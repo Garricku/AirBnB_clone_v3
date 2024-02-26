@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    This is the index module containing stats and status of class models
+    This is the index module
 """
 
 
