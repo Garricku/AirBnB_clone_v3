@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    This is the index module
+    This is the index module containing stats and status of class models
 """
 
 
@@ -39,4 +39,5 @@ def get_stats():
             "states": storage.count(State),
             "users": storage.count(User)
             }
-    return jsonify(stats)
+
+    return jsonify({stats})
