@@ -35,7 +35,7 @@ if __name__ == "__main__":
         host = os.environ["HBNB_API_HOST"]
     if "HBNB_API_PORT" in os.environ:
         port = int(os.environ["HBNB_API_PORT"])
-    
+
     app.register_blueprint(app_views)
 
     app.run(host=host, port=port, threaded=True)
