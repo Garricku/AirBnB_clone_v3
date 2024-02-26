@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This is the index module"""
+"""
+    This is the index module
+"""
+
 
 from flask import jsonify
 from api.v1.views import app_views
