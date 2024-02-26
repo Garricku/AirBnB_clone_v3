@@ -2,14 +2,15 @@
 """ API app module """
 
 
-import os
-from flask import Flask, jsonify
-from models import storage
 from api.v1.views import app_views
+from flask import Flask, jsonify
 from flask_cors import CORS
+from models import storage
+import os
 
 
 app = Flask(__name__)
+
 
 host = "0.0.0.0"
 port = 5000
@@ -36,4 +37,5 @@ if __name__ == "__main__":
         port = int(os.environ["HBNB_API_PORT"])
     
     app.register_blueprint(app_views)
+
     app.run(host=host, port=port, threaded=True)
