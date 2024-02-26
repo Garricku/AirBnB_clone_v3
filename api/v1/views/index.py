@@ -13,6 +13,7 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.user import User
+""" Defines the import modules and packages """
 
 
 @app_views.route("/status", methods=["GET"])
@@ -27,7 +28,6 @@ def status():
 def get_stats():
     """
     Retrieves the number of each object type.
-
     Returns:
         A JSON response with the count of each object type.
     """
