@@ -78,7 +78,7 @@ class DBStorage:
 
     def get(self, cls, id):
         """Returns the object based on the class & its ID, None if not found"""
-        if cls is not None and is in classes:
+        if cls is not None:
             data = self.__session.query(cls).filter_by(cls.id=id).first()
             return data
         else:
