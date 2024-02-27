@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """This is the states api module"""
 
+from api.v1.views import app_views
 from flask import jsonify, request, abort
-from api.v1.veiws import app_views
 from models import storage, State
 """These are the imported modules and packages"""
 
 
-@app_views.route("/states", methods=["GET"], strict_slashes=False)
+@app_views.route("/states/", methods=["GET"])
 def get_all_states():
     """Retrieves a list of all State objects"""
     states = storage.all(State)
