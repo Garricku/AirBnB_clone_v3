@@ -7,7 +7,10 @@ from models import storage, State
 """These are the imported modules and packages"""
 
 
-@app_views.route("/states/", methods=["GET"])
+"""app = Flask(__name__)"""
+
+
+@app_views.route("/states", methods=["GET"], strict_slashes=False)
 def get_all_states():
     """Retrieves a list of all State objects"""
     states = storage.all(State)
